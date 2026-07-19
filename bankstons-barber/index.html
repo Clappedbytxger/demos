@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Bankston's Barber Shop and Salon — making your hair look great in Barnesville, Georgia since 1938. Barber shop and full salon under one roof. Walk-ins welcome.">
+<title>Bankston's Barber Shop and Salon · Barnesville, GA · Since 1938</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2317130e'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' font-weight='700' fill='%23b98d3e' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#17130e;
+  --ink-soft:#2a231a;
+  --paper:#fbf7ee;
+  --cream:#f4ecdb;
+  --gold:#b98d3e;
+  --gold-soft:#d3b476;
+  --red:#9e2b25;
+  --blue:#23405f;
+  --muted:#6f6455;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:52px;
+}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.12}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);
+}
+.eyebrow::before,.eyebrow::after{content:"";width:26px;height:1px;background:var(--gold);opacity:.7}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:14px 26px;border-radius:4px;font-weight:600;font-size:15px;
+  text-decoration:none;transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+  border:1px solid transparent;cursor:pointer;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:#fff;box-shadow:0 8px 20px rgba(185,141,62,.35)}
+.btn-gold:hover{background:#a87d31}
+.btn-ghost{border-color:rgba(255,255,255,.35);color:#fff}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+.btn-dark{background:var(--ink);color:var(--paper)}
+.btn-dark:hover{background:#000}
+
+/* ---------- top bar ---------- */
+.topbar{background:var(--ink);color:#cfc4b0;font-size:13px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:14px;padding-top:8px;padding-bottom:8px}
+.topbar a{color:var(--gold-soft);text-decoration:none;font-weight:600}
+.topbar span.addr{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* ---------- nav ---------- */
+header.nav{
+  position:sticky;top:0;z-index:60;
+  background:rgba(251,247,238,.92);backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(23,19,14,.09);
+}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:70px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand .mono{
+  width:42px;height:42px;border-radius:50%;background:var(--ink);color:var(--gold-soft);
+  display:grid;place-items:center;font-family:'Playfair Display',serif;font-size:22px;font-weight:700;
+  border:2px solid var(--gold);
+}
+.brand .name{font-family:'Playfair Display',serif;font-weight:700;font-size:17px;letter-spacing:.02em;line-height:1.15}
+.brand .name small{display:block;font-family:'Inter',sans-serif;font-weight:600;font-size:10px;letter-spacing:.24em;color:var(--gold);text-transform:uppercase}
+nav.links{display:flex;gap:26px;align-items:center}
+nav.links a{font-size:14px;font-weight:600;text-decoration:none;color:var(--ink-soft);letter-spacing:.02em}
+nav.links a:hover{color:var(--red)}
+.nav-call{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;padding:10px 18px;border-radius:4px;font-size:14px;font-weight:700;text-decoration:none}
+.nav-call:hover{background:#872018}
+.burger{display:none;background:none;border:0;width:42px;height:42px;cursor:pointer}
+.burger span{display:block;height:2px;background:var(--ink);margin:6px 8px;transition:.2s}
+.mobile-menu{display:none;background:var(--paper);border-bottom:1px solid rgba(23,19,14,.12);padding:8px 22px 18px}
+.mobile-menu a{display:block;padding:11px 4px;font-weight:600;text-decoration:none;color:var(--ink);border-bottom:1px dashed rgba(23,19,14,.12);font-size:15px}
+.mobile-menu.open{display:block}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;background:var(--ink);color:var(--paper);overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(720px 420px at 82% 18%,rgba(185,141,62,.16),transparent 62%),
+    radial-gradient(560px 420px at 8% 90%,rgba(158,43,37,.14),transparent 60%);
+}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;padding-top:84px;padding-bottom:92px}
+.hero h1{font-size:clamp(38px,6vw,66px);font-weight:900;margin:18px 0 20px;color:#fdf9f0}
+.hero h1 em{font-style:italic;color:var(--gold-soft)}
+.hero p.lead{font-size:clamp(16px,2vw,19px);color:#d8cdb8;max-width:560px;margin-bottom:32px}
+.hero .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:36px}
+.trust{display:flex;flex-wrap:wrap;gap:12px}
+.trust .chip{
+  display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:99px;
+  border:1px solid rgba(255,255,255,.16);font-size:13px;font-weight:600;color:#e8dfcc;background:rgba(255,255,255,.04)
+}
+.trust .stars{color:var(--gold-soft);letter-spacing:2px}
+
+/* barber pole */
+.pole-wrap{display:flex;flex-direction:column;align-items:center;gap:0;filter:drop-shadow(0 18px 30px rgba(0,0,0,.45))}
+.pole-cap{width:84px;height:22px;border-radius:8px;background:linear-gradient(180deg,#d3b476,#8f6a26)}
+.pole-cap.small{width:58px;height:14px;border-radius:6px}
+.pole{
+  width:64px;height:300px;border-radius:32px;position:relative;overflow:hidden;
+  background:repeating-linear-gradient(135deg,var(--red) 0 14px,#f2ead9 14px 28px,var(--blue) 28px 42px,#f2ead9 42px 56px);
+  background-size:100% 300%;
+  animation:barber 7s linear infinite;
+  border:1px solid rgba(0,0,0,.35);
+}
+.pole::after{
+  content:"";position:absolute;inset:0;border-radius:32px;
+  background:linear-gradient(90deg,rgba(0,0,0,.42),rgba(0,0,0,0) 26%,rgba(255,255,255,.34) 46% 54%,rgba(0,0,0,0) 74%,rgba(0,0,0,.42));
+}
+@keyframes barber{to{background-position:0 79.2px}}
+@media (prefers-reduced-motion:reduce){.pole{animation:none}}
+
+/* ---------- sections ---------- */
+section{padding:88px 0}
+.sec-head{max-width:640px;margin-bottom:52px}
+.sec-head h2{font-size:clamp(30px,4vw,44px);font-weight:700;margin:14px 0 14px}
+.sec-head p{color:var(--muted);font-size:16.5px}
+.center{text-align:center}
+.center.sec-head{margin-left:auto;margin-right:auto}
+.center .eyebrow::before,.center .eyebrow::after{display:inline-block}
+
+/* timeline */
+.story{background:var(--cream);border-top:1px solid rgba(23,19,14,.06);border-bottom:1px solid rgba(23,19,14,.06)}
+.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.t-card{
+  background:#fffdf7;border:1px solid rgba(23,19,14,.08);border-radius:8px;padding:30px 26px;
+  position:relative;box-shadow:0 10px 26px rgba(23,19,14,.05)
+}
+.t-card::before{content:"";position:absolute;top:0;left:26px;right:26px;height:3px;background:linear-gradient(90deg,var(--red),var(--gold),var(--blue));border-radius:0 0 3px 3px}
+.t-year{font-family:'Playfair Display',serif;font-size:44px;font-weight:900;color:var(--gold);line-height:1}
+.t-card h3{font-size:19px;margin:12px 0 8px}
+.t-card p{font-size:14.5px;color:var(--muted)}
+.story-note{
+  margin-top:38px;text-align:center;font-family:'Playfair Display',serif;font-style:italic;
+  font-size:clamp(19px,2.6vw,25px);color:var(--ink-soft)
+}
+.story-note strong{color:var(--red);font-style:normal}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.svc{
+  background:#fff;border:1px solid rgba(23,19,14,.09);border-radius:8px;padding:28px 26px;
+  box-shadow:0 8px 22px rgba(23,19,14,.045)
+}
+.svc h3{display:flex;align-items:center;gap:11px;font-size:20px;margin-bottom:16px}
+.svc h3 .dot{width:10px;height:10px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(185,141,62,.18);flex:none}
+.svc ul{list-style:none}
+.svc li{
+  padding:9px 0;border-bottom:1px dashed rgba(23,19,14,.12);font-size:14.5px;color:var(--ink-soft);
+  display:flex;gap:9px;align-items:baseline
+}
+.svc li:last-child{border-bottom:0}
+.svc li::before{content:"·";color:var(--red);font-weight:900}
+.svc-note{
+  margin-top:30px;background:var(--cream);border:1px solid rgba(185,141,62,.35);border-radius:8px;
+  padding:18px 24px;display:flex;flex-wrap:wrap;gap:8px 26px;justify-content:center;align-items:center;
+  font-size:14px;color:var(--ink-soft)
+}
+.svc-note b{color:var(--red)}
+
+/* reviews */
+.reviews{background:var(--ink);color:var(--paper)}
+.reviews .eyebrow{color:var(--gold-soft)}
+.reviews .sec-head p{color:#c9bda6}
+.badge-row{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:48px}
+.badge{
+  border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.045);border-radius:8px;
+  padding:18px 28px;text-align:center;min-width:180px
+}
+.badge .big{font-family:'Playfair Display',serif;font-size:34px;font-weight:900;color:var(--gold-soft);line-height:1.05}
+.badge .lbl{font-size:12.5px;letter-spacing:.06em;color:#cfc4b0;margin-top:5px}
+.quote-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.quote{
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:28px 26px
+}
+.quote .q{font-family:'Playfair Display',serif;font-size:20px;font-style:italic;color:#f4ecdb;line-height:1.4}
+.quote .who{margin-top:16px;font-size:13px;color:#bfb29a}
+.quote .stars{color:var(--gold-soft);letter-spacing:2.5px;font-size:13px;margin-bottom:12px}
+
+/* hours */
+.hours-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:start}
+.hours-table{width:100%;border-collapse:collapse}
+.hours-table td{padding:13px 6px;border-bottom:1px dashed rgba(23,19,14,.15);font-size:15px}
+.hours-table td:last-child{text-align:right;font-weight:600}
+.hours-table .closed td:last-child{color:var(--red)}
+.hours-foot{margin-top:14px;font-size:13.5px;color:var(--muted)}
+.walkin{
+  background:var(--cream);border-left:4px solid var(--gold);border-radius:0 8px 8px 0;
+  padding:22px 24px;margin-top:26px
+}
+.walkin h3{font-size:18px;margin-bottom:6px}
+.walkin p{font-size:14.5px;color:var(--muted)}
+.visit-card{
+  background:#fff;border:1px solid rgba(23,19,14,.09);border-radius:8px;padding:30px 28px;
+  box-shadow:0 10px 26px rgba(23,19,14,.05)
+}
+.visit-card h3{font-size:21px;margin-bottom:18px}
+.v-row{display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px dashed rgba(23,19,14,.12)}
+.v-row:last-of-type{border-bottom:0}
+.v-ic{width:36px;height:36px;flex:none;border-radius:50%;background:var(--cream);display:grid;place-items:center;color:var(--red)}
+.v-row .lbl{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.v-row .val{font-size:15px;font-weight:600}
+.v-row a{text-decoration:none;color:var(--ink)}
+.v-row a:hover{color:var(--red)}
+.visit-card .btn{width:100%;margin-top:20px}
+
+/* footer */
+footer{background:var(--ink);color:#a89a80;padding:44px 0 40px;font-size:13.5px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
+footer .f-brand{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:var(--paper)}
+footer .f-brand small{display:block;font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-top:4px}
+footer .disclaimer{font-size:12px;max-width:420px;color:#7d7159}
+
+/* demo bar */
+.demo-note{
+  position:fixed;left:0;right:0;bottom:0;z-index:80;
+  background:#101010;color:#d9d0bd;font-size:12.5px;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  padding:9px 40px 9px 14px;text-align:center;border-top:1px solid rgba(185,141,62,.4)
+}
+.demo-note a{color:var(--gold-soft);font-weight:600}
+.demo-note button{
+  position:absolute;right:8px;top:50%;transform:translateY(-50%);
+  background:none;border:0;color:#8f8570;font-size:17px;cursor:pointer;padding:4px 8px
+}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+@media (max-width:900px){
+  .hero .wrap{grid-template-columns:1fr;padding-top:64px;padding-bottom:64px}
+  .pole-wrap{display:none}
+  .timeline{grid-template-columns:1fr}
+  .hours-grid{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  nav.links{display:none}
+  .burger{display:block}
+  .topbar span.addr{display:none}
+  section{padding:64px 0}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="addr">13 Market St, Barnesville, GA 30204 · On the square</span>
+    <span>Call or text: <a href="tel:+17703582883">(770) 358-2883</a></span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="mono">B</span>
+      <span class="name">Bankston's<small>Barber Shop &amp; Salon</small></span>
+    </a>
+    <nav class="links">
+      <a href="#story">Our Story</a>
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#hours">Hours</a>
+      <a href="#visit">Visit</a>
+      <a class="nav-call" href="tel:+17703582883">(770) 358-2883</a>
+    </nav>
+    <button class="burger" aria-label="Open menu" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu">
+    <a href="#story">Our Story</a>
+    <a href="#services">Services</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#hours">Hours</a>
+    <a href="#visit">Visit</a>
+    <a href="tel:+17703582883">Call (770) 358-2883</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Est. 1938 · Barnesville, Georgia</span>
+        <h1>Making your hair look great <em>since 1938.</em></h1>
+        <p class="lead">Three generations of Bankston barbers on the square in Barnesville — a classic barber shop and a full-service salon under one roof.</p>
+        <div class="cta-row">
+          <a class="btn btn-gold" href="tel:+17703582883">Call (770) 358-2883</a>
+          <a class="btn btn-ghost" href="#services">See our services</a>
+        </div>
+        <div class="trust">
+          <span class="chip"><span class="stars">★★★★★</span> 4.9 / 5 · 470+ reviews</span>
+          <span class="chip">100% recommended on Facebook</span>
+          <span class="chip">Walk-ins welcome</span>
+        </div>
+      </div>
+      <div class="pole-wrap" aria-hidden="true">
+        <div class="pole-cap small"></div>
+        <div class="pole-cap"></div>
+        <div class="pole"></div>
+        <div class="pole-cap"></div>
+        <div class="pole-cap small"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STORY -->
+  <section class="story" id="story">
+    <div class="wrap">
+      <div class="sec-head center rv">
+        <span class="eyebrow">A Barnesville Tradition</span>
+        <h2>Almost ninety years. One family. One town.</h2>
+        <p>Bankston's has been the place Barnesville comes to for a haircut — and a conversation — for generations.</p>
+      </div>
+      <div class="timeline">
+        <div class="t-card rv">
+          <div class="t-year">1938</div>
+          <h3>The original shop</h3>
+          <p>Billy Sr. opens Bankston Barber Shop on Main Street. From day one it's more than haircuts — it's where the men of Barnesville come to socialize.</p>
+        </div>
+        <div class="t-card rv">
+          <div class="t-year">1975</div>
+          <h3>The Hair Hut</h3>
+          <p>Billy Jr. opens the Hair Hut, a progressive hair salon offering women's and men's haircuts — bringing modern styling to town.</p>
+        </div>
+        <div class="t-card rv">
+          <div class="t-year">2007</div>
+          <h3>Two shops become one</h3>
+          <p>Dan Bankston merges the barber shop and the salon into today's Bankston's Barber Shop and Salon — continuing the family legacy.</p>
+        </div>
+      </div>
+      <p class="story-note rv">The Bankston family carries <strong>130+ years of combined barbering experience</strong> — and it shows in every cut.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head center rv">
+        <span class="eyebrow">Barber &amp; Salon</span>
+        <h2>Our professional services</h2>
+        <p>Classic barbering and full salon care — for men, women and kids, all in one place.</p>
+      </div>
+      <div class="svc-grid">
+        <div class="svc rv">
+          <h3><span class="dot"></span>Barbering</h3>
+          <ul>
+            <li>Men's cut, shampoo &amp; style</li>
+            <li>Tapered or wet cut</li>
+            <li>Flat top cut</li>
+            <li>Clean-up / edge</li>
+            <li>Beard &amp; mustache trim</li>
+          </ul>
+        </div>
+        <div class="svc rv">
+          <h3><span class="dot"></span>Women's Cuts &amp; Styling</h3>
+          <ul>
+            <li>Women's cut, shampoo &amp; style</li>
+            <li>Women's clipper cut · one-length cut</li>
+            <li>Women's wet cut</li>
+            <li>Shampoo &amp; blow out · shampoo set with rollers</li>
+            <li>Hair design / up-do's</li>
+          </ul>
+        </div>
+        <div class="svc rv">
+          <h3><span class="dot"></span>Color &amp; Highlights</h3>
+          <ul>
+            <li>Single process color</li>
+            <li>Grey hair color blending</li>
+            <li>Partial &amp; full highlights</li>
+            <li>Balayage or ombre</li>
+            <li>Glaze &amp; gloss treatments</li>
+          </ul>
+        </div>
+        <div class="svc rv">
+          <h3><span class="dot"></span>Perms &amp; Treatments</h3>
+          <ul>
+            <li>Standard perm</li>
+            <li>Spiral perm</li>
+            <li>Deep conditioning treatment</li>
+            <li>Scalp treatment</li>
+          </ul>
+        </div>
+        <div class="svc rv">
+          <h3><span class="dot"></span>Wax &amp; Massage</h3>
+          <ul>
+            <li>Brow wax · lip/face wax</li>
+            <li>30 / 60 / 90 minute massage</li>
+            <li>60 minute hot stone massage</li>
+          </ul>
+        </div>
+        <div class="svc rv">
+          <h3><span class="dot"></span>Good to know</h3>
+          <ul>
+            <li>Walk-ins welcome, appointments recommended</li>
+            <li>Later appointments available on request</li>
+            <li>Family-friendly — kids and seniors welcome</li>
+            <li>Prices depend on length, texture &amp; condition of hair and skin</li>
+          </ul>
+        </div>
+      </div>
+      <div class="svc-note rv">
+        <span><b>Questions or booking?</b> Give us a call — we'll fit you in.</span>
+        <a class="btn btn-dark" href="tel:+17703582883">(770) 358-2883</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews" id="reviews">
+    <div class="wrap">
+      <div class="sec-head center rv">
+        <span class="eyebrow">What Barnesville Says</span>
+        <h2>The most trusted barber shop in town</h2>
+        <p>Nearly ninety years of customer satisfaction — and the reviews to prove it.</p>
+      </div>
+      <div class="badge-row rv">
+        <div class="badge"><div class="big">4.9<span style="font-size:18px">/5</span></div><div class="lbl">470+ reviews overall</div></div>
+        <div class="badge"><div class="big">100%</div><div class="lbl">recommended · 204 Facebook reviews</div></div>
+        <div class="badge"><div class="big">1938</div><div class="lbl">serving Barnesville ever since</div></div>
+      </div>
+      <div class="quote-grid">
+        <div class="quote rv">
+          <div class="stars">★★★★★</div>
+          <p class="q">"Attention to detail."</p>
+          <p class="who">Customers call out Ashlee and Amber by name for the care they put into every appointment.</p>
+        </div>
+        <div class="quote rv">
+          <div class="stars">★★★★★</div>
+          <p class="q">"Family-friendly environment."</p>
+          <p class="who">A hometown shop where everyone — kids, parents, grandparents — feels welcome.</p>
+        </div>
+        <div class="quote rv">
+          <div class="stars">★★★★★</div>
+          <p class="q">"Affordable pricing and flexible appointments."</p>
+          <p class="who">Fair prices and scheduling that works around you, not the other way around.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOURS & VISIT -->
+  <section id="hours">
+    <div class="wrap">
+      <div class="hours-grid">
+        <div>
+          <div class="sec-head rv" style="margin-bottom:30px">
+            <span class="eyebrow">Opening Hours</span>
+            <h2>Stop by the square</h2>
+          </div>
+          <table class="hours-table rv">
+            <tr><td>Monday – Friday</td><td>9:00 am – 5:00 pm*</td></tr>
+            <tr><td>Saturday</td><td>9:00 am – 1:00 pm*</td></tr>
+            <tr class="closed"><td>Sunday</td><td>Closed</td></tr>
+          </table>
+          <p class="hours-foot rv">*Later by appointment only — just give us a call.</p>
+          <div class="walkin rv">
+            <h3>Walk-ins welcome</h3>
+            <p>No appointment? No problem. Walk right in, take a seat, and join the conversation — appointments are recommended if you're on a schedule.</p>
+          </div>
+        </div>
+        <div class="visit-card rv" id="visit">
+          <h3>Find us</h3>
+          <div class="v-row">
+            <span class="v-ic" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <div><div class="lbl">Address</div><div class="val">13 Market St, Barnesville, GA 30204</div></div>
+          </div>
+          <div class="v-row">
+            <span class="v-ic" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></span>
+            <div><div class="lbl">Phone</div><div class="val"><a href="tel:+17703582883">(770) 358-2883</a></div></div>
+          </div>
+          <div class="v-row">
+            <span class="v-ic" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+            <div><div class="lbl">Email</div><div class="val"><a href="mailto:Dan@BankstonsBarberShopAndSalon.com">Dan@BankstonsBarberShopAndSalon.com</a></div></div>
+          </div>
+          <div class="v-row">
+            <span class="v-ic" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.6l.4-3h-3V9.1c0-.9.3-1.5 1.6-1.5H16.6V4.9c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9V11H8v3h2.5v7h3Z"/></svg></span>
+            <div><div class="lbl">Facebook</div><div class="val"><a href="https://www.facebook.com/BankstonsBarberShopandSalon/" target="_blank" rel="noopener">@BankstonsBarberShopandSalon</a></div></div>
+          </div>
+          <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&amp;query=Bankston%27s+Barber+Shop+and+Salon%2C+13+Market+St%2C+Barnesville%2C+GA+30204" target="_blank" rel="noopener">Get directions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="f-brand">Bankston's<small>Barber Shop &amp; Salon · Est. 1938</small></div>
+    </div>
+    <p class="disclaimer">Website design concept prepared for Bankston's Barber Shop and Salon. This preview is not the shop's official website. Review figures sourced from public listings, July 2026.</p>
+  </div>
+</footer>
+
+<div class="demo-note" id="demoNote">
+  <span>Concept design by Robin Humberg · <a href="mailto:robinhumberg@gmx.de">robinhumberg@gmx.de</a></span>
+  <button aria-label="Dismiss" onclick="document.getElementById('demoNote').style.display='none';document.body.style.paddingBottom='0'">×</button>
+</div>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.mobile-menu').classList.remove('open')));
+</script>
+</body>
+</html>
