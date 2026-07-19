@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="The Gateway Diner, Wickliffe OH — where friends become family. Family owned & operated. All-day breakfast, hand-pressed burgers, homemade soups. Order online or dine in.">
+<title>The Gateway Diner · Wickliffe, OH · Where Friends Become Family</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23c8452c'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='34' font-weight='700' fill='%23fdf6ea' text-anchor='middle'%3EG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;900&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#fdf6ea;
+  --cream-2:#f7ecd8;
+  --brown:#3f2a1e;
+  --brown-soft:#6b4c38;
+  --red:#c8452c;
+  --red-deep:#a53521;
+  --mustard:#e2a63d;
+  --muted:#8a7361;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Archivo',system-ui,sans-serif;background:var(--cream);color:var(--brown);
+  line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:52px;
+}
+h1,h2,h3{line-height:1.12}
+.script{font-family:'Pacifico',cursive;font-weight:400}
+a{color:inherit}
+svg{display:block}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--red)}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 26px;
+  border-radius:99px;font-weight:700;font-size:15px;text-decoration:none;border:2px solid transparent;
+  transition:transform .18s,background .18s;cursor:pointer;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 10px 24px rgba(200,69,44,.3)}
+.btn-red:hover{background:var(--red-deep)}
+.btn-line{border-color:var(--brown);color:var(--brown)}
+.btn-line:hover{background:var(--brown);color:var(--cream)}
+.checker{height:18px;background:repeating-conic-gradient(var(--red) 0% 25%,var(--cream) 0% 50%) 0 0/36px 36px}
+
+/* topbar */
+.topbar{background:var(--brown);color:#eadbc8;font-size:13px}
+.topbar .wrap{display:flex;justify-content:space-between;gap:14px;padding:8px 22px}
+.topbar a{color:var(--mustard);text-decoration:none;font-weight:700}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:60;background:rgba(253,246,234,.93);backdrop-filter:blur(10px);border-bottom:1px solid rgba(63,42,30,.12)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;flex-direction:column;text-decoration:none;line-height:1.1}
+.brand .top{font-weight:900;font-size:19px;letter-spacing:.04em;text-transform:uppercase}
+.brand .top .the{color:var(--red)}
+.brand .tag{font-family:'Pacifico',cursive;font-size:13px;color:var(--muted);margin-top:2px}
+nav.links{display:flex;gap:22px;align-items:center}
+nav.links a{font-size:14px;font-weight:600;text-decoration:none;color:var(--brown)}
+nav.links a:hover{color:var(--red)}
+.nav-order{background:var(--red);color:#fff;padding:10px 20px;border-radius:99px;font-size:14px;font-weight:700;text-decoration:none}
+.nav-order:hover{background:var(--red-deep)}
+.burger{display:none;background:none;border:0;width:42px;height:42px;cursor:pointer}
+.burger span{display:block;height:2px;background:var(--brown);margin:6px 8px}
+.mobile-menu{display:none;background:var(--cream);border-bottom:1px solid rgba(63,42,30,.14);padding:8px 22px 18px}
+.mobile-menu a{display:block;padding:11px 4px;font-weight:600;text-decoration:none;color:var(--brown);border-bottom:1px dashed rgba(63,42,30,.16);font-size:15px}
+.mobile-menu.open{display:block}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:var(--cream)}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(640px 400px at 85% 8%,rgba(226,166,61,.2),transparent 62%),radial-gradient(520px 380px at 4% 96%,rgba(200,69,44,.1),transparent 60%);
+}
+.hero .wrap{position:relative;text-align:center;max-width:840px;padding-top:88px;padding-bottom:88px}
+.hero .welcome{font-size:13px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--brown-soft)}
+.hero h1{font-family:'Pacifico',cursive;font-weight:400;font-size:clamp(40px,7vw,76px);color:var(--red);margin:22px 0 8px;transform:rotate(-2deg)}
+.hero .sub{font-weight:900;font-size:clamp(17px,2.6vw,24px);text-transform:uppercase;letter-spacing:.16em;margin-bottom:22px}
+.hero p.lead{font-size:16.5px;color:var(--brown-soft);max-width:600px;margin:0 auto 34px}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:36px}
+.chips{display:flex;flex-wrap:wrap;gap:11px;justify-content:center}
+.chip{border:1.5px solid rgba(63,42,30,.2);background:#fff;border-radius:99px;padding:9px 17px;font-size:13px;font-weight:600;color:var(--brown-soft)}
+.chip b{color:var(--red)}
+
+/* signature strip */
+.sig{background:var(--brown);color:var(--cream);padding:66px 0}
+.sig-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.sig-card{text-align:center;padding:26px 18px;border:1px solid rgba(253,246,234,.14);border-radius:14px;background:rgba(253,246,234,.04)}
+.sig-card .ic{width:56px;height:56px;margin:0 auto 14px;border-radius:50%;background:rgba(226,166,61,.16);display:grid;place-items:center;color:var(--mustard)}
+.sig-card h3{font-size:16.5px;font-weight:700;letter-spacing:.04em;margin-bottom:6px}
+.sig-card p{font-size:13.5px;color:#d9c6ae}
+
+/* sections */
+section{padding:88px 0}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 48px}
+.sec-head h2{font-size:clamp(30px,4.4vw,46px);font-weight:900;margin:12px 0 12px;text-transform:uppercase;letter-spacing:.02em}
+.sec-head h2 .script{color:var(--red);text-transform:none;letter-spacing:0;font-size:.85em}
+.sec-head p{color:var(--muted);font-size:16px}
+
+/* menu */
+.menu{background:var(--cream-2);border-top:1px solid rgba(63,42,30,.08);border-bottom:1px solid rgba(63,42,30,.08)}
+.tabs{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:44px}
+.tab{
+  border:2px solid rgba(63,42,30,.2);background:#fff;color:var(--brown);border-radius:99px;
+  padding:11px 20px;font-family:'Archivo',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:.18s
+}
+.tab:hover{border-color:var(--red);color:var(--red)}
+.tab.on{background:var(--red);color:#fff;border-color:var(--red)}
+.panel{display:none}
+.panel.on{display:block}
+.m-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px 34px;max-width:960px;margin:0 auto}
+.m-item{display:flex;flex-direction:column;background:#fff;border:1px solid rgba(63,42,30,.09);border-radius:12px;padding:18px 22px}
+.m-line{display:flex;align-items:baseline;gap:8px}
+.m-line h4{font-size:15.5px;font-weight:700;letter-spacing:.02em}
+.m-line .dots{flex:1;border-bottom:2px dotted rgba(63,42,30,.25);transform:translateY(-4px)}
+.m-line .price{font-weight:900;color:var(--red);font-size:15.5px;white-space:nowrap}
+.m-item p{font-size:13.5px;color:var(--muted);margin-top:5px}
+.panel-note{
+  margin:28px auto 0;max-width:720px;text-align:center;font-size:13.5px;color:var(--brown-soft);
+  background:rgba(226,166,61,.16);border:1.5px dashed rgba(226,166,61,.7);border-radius:12px;padding:14px 20px
+}
+.menu-foot{margin-top:30px;text-align:center;font-size:12.5px;color:var(--muted);max-width:720px;margin-left:auto;margin-right:auto}
+
+/* reviews */
+.badge-row{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:44px}
+.badge{background:#fff;border:1px solid rgba(63,42,30,.1);border-radius:14px;padding:20px 30px;text-align:center;min-width:190px;box-shadow:0 10px 24px rgba(63,42,30,.06)}
+.badge .big{font-weight:900;font-size:36px;color:var(--red);line-height:1.05}
+.badge .lbl{font-size:12.5px;color:var(--muted);margin-top:5px}
+.quote-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.quote{background:#fff;border:1px solid rgba(63,42,30,.1);border-radius:14px;padding:26px 26px;box-shadow:0 8px 20px rgba(63,42,30,.05)}
+.quote .stars{color:var(--mustard);letter-spacing:2.5px;font-size:14px;margin-bottom:12px}
+.quote .q{font-size:15.5px;line-height:1.55;font-style:italic;color:var(--brown)}
+.quote .who{margin-top:12px;font-size:12.5px;color:var(--muted)}
+
+/* hours & visit */
+.visit{background:var(--brown);color:var(--cream)}
+.visit .sec-head p{color:#cdb69c}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;max-width:940px;margin:0 auto}
+.v-card{border:1px solid rgba(253,246,234,.16);border-radius:14px;padding:32px 30px;background:rgba(253,246,234,.045)}
+.v-card h3{font-size:19px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:18px;color:var(--mustard)}
+.hours-table{width:100%;border-collapse:collapse}
+.hours-table td{padding:12px 4px;border-bottom:1px dashed rgba(253,246,234,.2);font-size:15px}
+.hours-table td:last-child{text-align:right;font-weight:700}
+.hours-foot{margin-top:14px;font-size:13px;color:#cdb69c}
+.v-card .row{display:flex;gap:12px;padding:10px 0;font-size:14.5px;align-items:baseline}
+.v-card .row .lbl{min-width:86px;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#cdb69c}
+.v-card .row a{color:var(--cream);text-decoration:none;font-weight:600}
+.v-card .row a:hover{color:var(--mustard)}
+.v-card .btn{width:100%;margin-top:16px}
+.order-banner{
+  max-width:940px;margin:28px auto 0;border-radius:14px;background:linear-gradient(120deg,var(--red),#d95b33);
+  padding:30px 34px;display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between
+}
+.order-banner .txt{color:#fff}
+.order-banner .txt .script{font-size:24px;display:block;margin-bottom:2px}
+.order-banner .txt p{font-size:14px;color:#ffe3d2}
+.order-banner .btn{background:#fff;color:var(--red)}
+.order-banner .btn:hover{background:var(--cream)}
+
+/* footer */
+footer{background:#2e1e14;color:#b39b82;padding:44px 0 40px;font-size:13.5px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
+footer .f-brand{font-weight:900;font-size:17px;letter-spacing:.06em;text-transform:uppercase;color:var(--cream)}
+footer .f-brand small{display:block;font-family:'Pacifico',cursive;font-weight:400;font-size:13px;color:var(--mustard);text-transform:none;letter-spacing:0;margin-top:4px}
+footer .disclaimer{font-size:12px;max-width:430px;color:#96917d;color:#9c8468}
+
+/* demo bar */
+.demo-note{
+  position:fixed;left:0;right:0;bottom:0;z-index:80;background:#1d130c;color:#d9c6ae;font-size:12.5px;
+  display:flex;align-items:center;justify-content:center;gap:8px;padding:9px 40px 9px 14px;text-align:center;
+  border-top:1px solid rgba(226,166,61,.5)
+}
+.demo-note a{color:var(--mustard);font-weight:600}
+.demo-note button{position:absolute;right:8px;top:50%;transform:translateY(-50%);background:none;border:0;color:#8a7361;font-size:17px;cursor:pointer;padding:4px 8px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+@media (max-width:860px){
+  .visit-grid{grid-template-columns:1fr}
+  nav.links{display:none}
+  .burger{display:block}
+  .topbar .left{display:none}
+  .topbar .wrap{justify-content:center}
+  section{padding:64px 0}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="left">29325 Euclid Ave, Wickliffe, OH 44092</span>
+    <span>Call us: <a href="tel:+14402958095">440-295-8095</a> · <a href="https://www.toasttab.com/the-gateway-diner/v3#!/" target="_blank" rel="noopener">Order online</a></span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="top"><span class="the">The</span> Gateway Diner</span>
+      <span class="tag">where friends become family</span>
+    </a>
+    <nav class="links">
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Hours &amp; Visit</a>
+      <a class="nav-order" href="https://www.toasttab.com/the-gateway-diner/v3#!/" target="_blank" rel="noopener">Order Online</a>
+    </nav>
+    <button class="burger" aria-label="Open menu" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu">
+    <a href="#menu">Menu</a>
+    <a href="#about">About</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#visit">Hours &amp; Visit</a>
+    <a href="https://www.toasttab.com/the-gateway-diner/v3#!/" target="_blank" rel="noopener">Order Online</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap">
+      <span class="welcome">Family Owned &amp; Operated · Wickliffe, Ohio</span>
+      <h1>Where friends become family</h1>
+      <div class="sub">The Gateway Diner</div>
+      <p class="lead">Amazing breakfast served all day, American home-cooked meals, burgers hand-pressed fresh daily, and homemade soups. You won't walk out hungry!</p>
+      <div class="cta-row">
+        <a class="btn btn-red" href="https://www.toasttab.com/the-gateway-diner/v3#!/" target="_blank" rel="noopener">Order online</a>
+        <a class="btn btn-line" href="#menu">See the menu</a>
+      </div>
+      <div class="chips">
+        <span class="chip"><b>94%</b> recommend · 214 Facebook reviews</span>
+        <span class="chip"><b>5.0</b> on TripAdvisor</span>
+        <span class="chip">Loved by the locals</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="checker" aria-hidden="true"></div>
+
+  <!-- SIGNATURES -->
+  <div class="sig">
+    <div class="wrap">
+      <div class="sig-grid">
+        <div class="sig-card rv">
+          <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg></div>
+          <h3>Breakfast All Day</h3>
+          <p>Omelets, benedicts, pancakes &amp; skillets — morning rules don't apply here.</p>
+        </div>
+        <div class="sig-card rv">
+          <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h16M4 10a2 2 0 0 1 0-4h16a2 2 0 0 1 0 4M4 10l1 9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2l1-9M8 6V5a4 4 0 0 1 8 0v1"/></svg></div>
+          <h3>Hand-Pressed Burgers</h3>
+          <p>Pressed fresh every single day — thick, juicy, never frozen.</p>
+        </div>
+        <div class="sig-card rv">
+          <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 11h16a1 1 0 0 1 1 1 8 8 0 0 1-16 0v0M4 11a1 1 0 0 0-1 1 8 8 0 0 0 1 3.5M8 7c0-1.5 1-1.5 1-3M12 7c0-1.5 1-1.5 1-3M16 7c0-1.5 1-1.5 1-3"/></svg></div>
+          <h3>Homemade Soups</h3>
+          <p>Chicken noodle, soup du jour, seasonal chili — made in our kitchen.</p>
+        </div>
+        <div class="sig-card rv">
+          <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 8h2a3 3 0 0 1 0 6h-2M3 8h14v7a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8Z"/></svg></div>
+          <h3>Big Coffee Mugs</h3>
+          <p>The kind of mugs regulars write reviews about. Bottomless warmth.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MENU -->
+  <section class="menu" id="menu">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="eyebrow">Fresh From the Kitchen</span>
+        <h2>The <span class="script">menu</span></h2>
+        <p>Highlights from our full menu — breakfast until close, lunch &amp; dinner favorites, and something for the kids.</p>
+      </div>
+      <div class="tabs rv">
+        <button class="tab on" data-panel="p-bfast">Breakfast</button>
+        <button class="tab" data-panel="p-burgers">Burgers</button>
+        <button class="tab" data-panel="p-sand">Sandwiches</button>
+        <button class="tab" data-panel="p-salads">Salads &amp; Soups</button>
+        <button class="tab" data-panel="p-entrees">Entrées</button>
+        <button class="tab" data-panel="p-kids">Kids</button>
+      </div>
+
+      <div class="panel on" id="p-bfast">
+        <div class="m-grid">
+          <div class="m-item"><div class="m-line"><h4>Build Your Own 3-Egg Omelet</h4><span class="dots"></span><span class="price">$7.00</span></div><p>Or served as a skillet. Choice of cheese, with toast &amp; home fries. Veggies +$0.75, meats +$1.75.</p></div>
+          <div class="m-item"><div class="m-line"><h4>Traditional Breakfast</h4><span class="dots"></span><span class="price">$7.00</span></div><p>2 eggs, home fries &amp; toast. Three eggs $8.00 · add meat +$1.75.</p></div>
+          <div class="m-item"><div class="m-line"><h4>Eggs Benedict</h4><span class="dots"></span><span class="price">$12.00</span></div><p>English muffin, Canadian bacon, poached eggs &amp; hollandaise, with home fries.</p></div>
+          <div class="m-item"><div class="m-line"><h4>Crab Cake Benedict</h4><span class="dots"></span><span class="price">$14.50</span></div><p>Shrimp, scallop &amp; crab cakes topped with poached eggs and hollandaise.</p></div>
+          <div class="m-item"><div class="m-line"><h4>Biscuits &amp; Gravy</h4><span class="dots"></span><span class="price">$10.00</span></div><p>Two biscuits in creamy gravy with two eggs. With sausage gravy $11.50.</p></div>
+          <div class="m-item"><div class="m-line"><h4>Pancakes</h4><span class="dots"></span><span class="price">$10.00</span></div><p>Short stack (2) — tall stack (4) $13.00. Buttermilk, banana nut, chocolate chip or blueberry.</p></div>
+          <div class="m-item"><div class="m-line"><h4>French Toast</h4><span class="dots"></span><span class="price">$10.00</span></div><p>Cinnamon swirl bread with cinnamon glaze, 2 eggs &amp; choice of meat. Stack (2) $13.00.</p></div>
+          <div class="m-item"><div class="m-line"><h4>Corned Beef Hash</h4><span class="dots"></span><span class="price">$11.50</span></div><p>With 2 eggs cooked to order, home fries &amp; toast.</p></div>
+          <div class="m-item"><div class="m-line"><h4>Country Fried Steak</h4><span class="dots"></span><span class="price">$12.50</span></div><p>Chopped beef steak with country gravy, two eggs, toast &amp; home fries.</p></div>
+          <div class="m-item"><div class="m-line"><h4>Breakfast Quesadilla</h4><span class="dots"></span><span class="price">$11.00</span></div><p>Scrambled eggs, peppers, tomato, onion, jalapeños &amp; cheddar. Make it a loaded burrito $11.50.</p></div>
+        </div>
+        <p class="panel-note">Breakfast served all day · Pancakes until 11am Mon–Fri, all day Sat &amp; Sun</p>
+      </div>
+
+      <div class="panel" id="p-burgers">
+        <div class="m-grid">
+          <div class="m-item"><div class="m-line"><h4>The Gatekeeper</h4><span class="dots"></span><span class="price">$13.00</span></div><p>Two ¼ lb patties, melted American, lettuce &amp; our own Gateway Sauce on brioche.</p></div>
+          <div class="m-item"><div class="m-line"><h4>Wickliffe Blue Devil</h4><span class="dots"></span><span class="price">$15.00</span></div><p>Hand-pattied burger with fried jalapeños, bacon, pepper jack &amp; chipotle ranch.</p></div>
+          <div class="m-item"><div class="m-line"><h4>Western Burger</h4><span class="dots"></span><span class="price">$13.50</span></div><p>Bacon, BBQ sauce, onion ring &amp; cheddar on a brioche bun.</p></div>
+          <div class="m-item"><div class="m-line"><h4>Breakfast Burger</h4><span class="dots"></span><span class="price">$13.50</span></div><p>Beef patty with an egg cooked to order, cheese &amp; bacon.</p></div>
+          <div class="m-item"><div class="m-line"><h4>Patty Melt</h4><span class="dots"></span><span class="price">$13.00</span></div><p>Handmade patty, sautéed onions &amp; American cheese on marble rye.</p></div>
+          <div class="m-item"><div class="m-line"><h4>Classic Cheeseburger</h4><span class="dots"></span><span class="price">$11.50</span></div><p>Lettuce, tomato, onion &amp; American cheese. Classic hamburger $10.50.</p></div>
+        </div>
+        <p class="panel-note">All burgers hand-pressed fresh daily &amp; served with your choice of side · Go vegetarian with the Beyond Burger™ +$3.00</p>
+      </div>
+
+      <div class="panel" id="p-sand">
+        <div class="m-grid">
+          <div class="m-item"><div class="m-line"><h4>Diner BLT</h4><span class="dots"></span><span class="price">$12.50</span></div><p>Egg cooked to order, American cheese, bacon &amp; maple brown sugar aioli on Texas Toast.</p></div>
+          <div class="m-item"><div class="m-line"><h4>Reuben Sandwich</h4><span class="dots"></span><span class="price">$13.50</span></div><p>Tender corned beef, sauerkraut, Swiss &amp; homemade Thousand Island on marble rye.</p></div>
+          <div class="m-item"><div class="m-line"><h4>Traditional Club</h4><span class="dots"></span><span class="price">$13.00</span></div><p>Turkey, ham &amp; crispy bacon stacked on Texas Toast with all the fixings.</p></div>
+          <div class="m-item"><div class="m-line"><h4>Gyro</h4><span class="dots"></span><span class="price">$13.00</span></div><p>Beef &amp; lamb, onions and tomatoes on grilled pita with tzatziki.</p></div>
+          <div class="m-item"><div class="m-line"><h4>Cheese Steak Hoagie</h4><span class="dots"></span><span class="price">$13.00</span></div><p>Shredded beef, sautéed peppers, onions &amp; mushrooms, provolone and garlic aioli.</p></div>
+          <div class="m-item"><div class="m-line"><h4>Fish Sandwich</h4><span class="dots"></span><span class="price">$12.50</span></div><p>Lake perch on a hoagie roll with tartar sauce, lettuce, tomato &amp; American cheese.</p></div>
+        </div>
+        <p class="panel-note">All sandwiches served with your choice of side</p>
+      </div>
+
+      <div class="panel" id="p-salads">
+        <div class="m-grid">
+          <div class="m-item"><div class="m-line"><h4>Cobb Salad</h4><span class="dots"></span><span class="price">$13.50</span></div><p>Tomatoes, onions, avocado, bacon, egg, bleu cheese &amp; grilled chicken.</p></div>
+          <div class="m-item"><div class="m-line"><h4>Southwest Chicken</h4><span class="dots"></span><span class="price">$14.00</span></div><p>Avocado, black beans, corn, cheddar &amp; crispy chicken on romaine.</p></div>
+          <div class="m-item"><div class="m-line"><h4>Caesar Salad</h4><span class="dots"></span><span class="price">$9.50</span></div><p>Parmesan &amp; croutons. Add chicken, salmon, tuna or chicken salad +$3.00.</p></div>
+          <div class="m-item"><div class="m-line"><h4>Chicken Noodle Soup</h4><span class="dots"></span><span class="price">$4.50</span></div><p>Made here, every day.</p></div>
+          <div class="m-item"><div class="m-line"><h4>Soup du Jour</h4><span class="dots"></span><span class="price">$4.50</span></div><p>Ask your server for today's homemade option.</p></div>
+          <div class="m-item"><div class="m-line"><h4>Chili (seasonal)</h4><span class="dots"></span><span class="price">$5.00</span></div><p>Served with corn bread upon request.</p></div>
+        </div>
+        <p class="panel-note">Salads come with your choice of dressing &amp; corn bread</p>
+      </div>
+
+      <div class="panel" id="p-entrees">
+        <div class="m-grid">
+          <div class="m-item"><div class="m-line"><h4>Meatloaf</h4><span class="dots"></span><span class="price">$15.00</span></div><p>Individual meatloaf &amp; gravy with choice of potato and vegetable du jour.</p></div>
+          <div class="m-item"><div class="m-line"><h4>Fish Dinner</h4><span class="dots"></span><span class="price">$15.00</span></div><p>Battered lake perch with choice of potato and coleslaw.</p></div>
+          <div class="m-item"><div class="m-line"><h4>Salmon Dinner</h4><span class="dots"></span><span class="price">$16.00</span></div><p>Grilled to order with potato, vegetable du jour and a side or Caesar salad.</p></div>
+          <div class="m-item"><div class="m-line"><h4>Chicken Parmesan</h4><span class="dots"></span><span class="price">$15.00</span></div><p>Breaded chicken breast, provolone &amp; marinara with pasta. Meatballs available instead.</p></div>
+          <div class="m-item"><div class="m-line"><h4>Pierogi Plate</h4><span class="dots"></span><span class="price">$12.00</span></div><p>Potato &amp; cheese pierogi, caramelized onions &amp; sour cream.</p></div>
+          <div class="m-item"><div class="m-line"><h4>Macaroni &amp; Cheese</h4><span class="dots"></span><span class="price">$13.50</span></div><p>Homemade creamy white cheddar sauce. With a side or Caesar salad.</p></div>
+        </div>
+        <p class="panel-note">Ask your server for today's dessert selection!</p>
+      </div>
+
+      <div class="panel" id="p-kids">
+        <div class="m-grid">
+          <div class="m-item"><div class="m-line"><h4>Kids Breakfast</h4><span class="dots"></span><span class="price">$6.00</span></div><p>Pancakes, egg plate, egg sandwich, French toast or oatmeal — with fruit, meat or potatoes.</p></div>
+          <div class="m-item"><div class="m-line"><h4>Kids Lunch &amp; Dinner</h4><span class="dots"></span><span class="price">$8.00</span></div><p>Pizza bagels, chicken tenders, cheeseburger slider, mac &amp; cheese, grilled cheese or pasta with meatballs.</p></div>
+        </div>
+        <p class="panel-note">Dine-in kids meals include a fountain beverage (free refills) or milk/juice</p>
+      </div>
+
+      <p class="menu-foot rv">Menu highlights — the full menu is waiting for you at the diner. Consumer advisory: consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase your risk of foodborne illness.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head rv" style="margin-bottom:24px">
+        <span class="eyebrow">Who We Are</span>
+        <h2>Loved by <span class="script">the locals</span></h2>
+      </div>
+      <p class="rv" style="max-width:700px;margin:0 auto;text-align:center;font-size:17px;color:var(--brown-soft);line-height:1.75">
+        The Gateway Diner is a casual family atmosphere — family owned and operated. Our menu features homemade dishes from breakfast, lunch and dinner, with some of the most delicious combinations of ingredients. There's something for everyone to enjoy, and no one leaves hungry. That's a promise.
+      </p>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="eyebrow">What Wickliffe Says</span>
+        <h2>Don't take <span class="script">our word</span> for it</h2>
+      </div>
+      <div class="badge-row rv">
+        <div class="badge"><div class="big">94%</div><div class="lbl">recommend · 214 Facebook reviews</div></div>
+        <div class="badge"><div class="big">5.0</div><div class="lbl">rating on TripAdvisor</div></div>
+        <div class="badge"><div class="big">100%</div><div class="lbl">family owned &amp; operated</div></div>
+      </div>
+      <div class="quote-grid">
+        <div class="quote rv">
+          <div class="stars">★★★★★</div>
+          <p class="q">"Love their big coffee mugs and the omelettes."</p>
+          <p class="who">Facebook review</p>
+        </div>
+        <div class="quote rv">
+          <div class="stars">★★★★★</div>
+          <p class="q">"Great burgers that are hand pressed, thick, and juicy."</p>
+          <p class="who">Customer review</p>
+        </div>
+        <div class="quote rv">
+          <div class="stars">★★★★★</div>
+          <p class="q">"Prices are unmatched."</p>
+          <p class="who">Customer review</p>
+        </div>
+        <div class="quote rv">
+          <div class="stars">★★★★★</div>
+          <p class="q">"Spacious and clean."</p>
+          <p class="who">Customer review</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="checker" aria-hidden="true"></div>
+
+  <!-- HOURS & VISIT -->
+  <section class="visit" id="visit">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="eyebrow" style="color:var(--mustard)">Come On In</span>
+        <h2 style="color:var(--cream)">Hours &amp; <span class="script" style="color:var(--mustard)">visit</span></h2>
+      </div>
+      <div class="visit-grid">
+        <div class="v-card rv">
+          <h3>Opening Hours</h3>
+          <table class="hours-table">
+            <tr><td>Monday – Friday</td><td>8:00am – 3:00pm</td></tr>
+            <tr><td>Saturday – Sunday</td><td>8:00am – 2:00pm</td></tr>
+          </table>
+          <p class="hours-foot">Hours may change for holidays — follow us on Facebook for updates &amp; daily specials.</p>
+        </div>
+        <div class="v-card rv">
+          <h3>Find Us</h3>
+          <div class="row"><span class="lbl">Address</span><span>29325 Euclid Ave, Wickliffe, Ohio 44092</span></div>
+          <div class="row"><span class="lbl">Phone</span><a href="tel:+14402958095">440-295-8095</a></div>
+          <div class="row"><span class="lbl">Email</span><a href="mailto:thegatewaydiner2019@yahoo.com">thegatewaydiner2019@yahoo.com</a></div>
+          <div class="row"><span class="lbl">Facebook</span><a href="https://www.facebook.com/thegatewaydiner" target="_blank" rel="noopener">@thegatewaydiner</a></div>
+          <a class="btn btn-red" href="https://www.google.com/maps/search/?api=1&amp;query=The+Gateway+Diner%2C+29325+Euclid+Ave%2C+Wickliffe%2C+OH+44092" target="_blank" rel="noopener">Get directions</a>
+        </div>
+      </div>
+      <div class="order-banner rv">
+        <div class="txt">
+          <span class="script">Hungry right now?</span>
+          <p>Skip the wait — order pickup online through Toast.</p>
+        </div>
+        <a class="btn" href="https://www.toasttab.com/the-gateway-diner/v3#!/" target="_blank" rel="noopener">Order online →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-brand">The Gateway Diner<small>where friends become family</small></div>
+    <p class="disclaimer">Website design concept prepared for The Gateway Diner. This preview is not the diner's official website. Menu &amp; prices from the diner's published menu, July 2026 — subject to change.</p>
+  </div>
+</footer>
+
+<div class="demo-note" id="demoNote">
+  <span>Concept design by Robin Humberg · <a href="mailto:robinhumberg@gmx.de">robinhumberg@gmx.de</a></span>
+  <button aria-label="Dismiss" onclick="document.getElementById('demoNote').style.display='none';document.body.style.paddingBottom='0'">×</button>
+</div>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));
+  document.querySelectorAll('.panel').forEach(x=>x.classList.remove('on'));
+  t.classList.add('on');
+  document.getElementById(t.dataset.panel).classList.add('on');
+}));
+document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.mobile-menu').classList.remove('open')));
+</script>
+</body>
+</html>
