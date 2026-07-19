@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="J's Restaurant & Lounge — proudly serving Newberg, Oregon since 1975. Breakfast, lunch and dinner 7 days a week, plus the Fireside Lounge with daily happy hour and Oregon Lottery.">
+<title>J's Restaurant &amp; Lounge · Newberg, OR · Since 1975</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23451016'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' font-style='italic' font-weight='700' fill='%23c9973f' text-anchor='middle'%3EJ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --burgundy:#5d1f28;
+  --burgundy-deep:#40121a;
+  --cream:#faf3e6;
+  --cream-2:#f3e8d2;
+  --gold:#c9973f;
+  --gold-soft:#e0bc74;
+  --ink:#2b1a14;
+  --muted:#7a6a58;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(--ink);
+  line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:52px;
+}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.1}
+a{color:inherit}
+svg{display:block}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 26px;
+  border-radius:99px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid transparent;
+  transition:transform .18s ease,background .18s ease;cursor:pointer;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:#2b1206;box-shadow:0 10px 24px rgba(201,151,63,.35)}
+.btn-gold:hover{background:#b98430}
+.btn-ghost{border-color:rgba(255,255,255,.4);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+.btn-wine{background:var(--burgundy);color:var(--cream)}
+.btn-wine:hover{background:var(--burgundy-deep)}
+
+/* topbar */
+.topbar{background:var(--burgundy-deep);color:#e6d3b8;font-size:13px}
+.topbar .wrap{display:flex;justify-content:space-between;gap:14px;padding:8px 22px}
+.topbar b{color:var(--gold-soft)}
+.topbar a{color:var(--gold-soft);text-decoration:none;font-weight:700}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:60;background:rgba(250,243,230,.93);backdrop-filter:blur(10px);border-bottom:1px solid rgba(43,26,20,.1)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:baseline;gap:10px;text-decoration:none}
+.brand .j{font-family:'Fraunces',serif;font-style:italic;font-weight:900;font-size:34px;color:var(--burgundy);line-height:1}
+.brand .rest{font-family:'Fraunces',serif;font-weight:700;font-size:17px;color:var(--ink)}
+.brand .rest small{display:block;font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+nav.links{display:flex;gap:24px;align-items:center}
+nav.links a{font-size:14px;font-weight:600;text-decoration:none;color:var(--ink)}
+nav.links a:hover{color:var(--burgundy)}
+.nav-call{background:var(--burgundy);color:var(--cream);padding:10px 18px;border-radius:99px;font-size:14px;font-weight:700;text-decoration:none}
+.nav-call:hover{background:var(--burgundy-deep)}
+.burger{display:none;background:none;border:0;width:42px;height:42px;cursor:pointer}
+.burger span{display:block;height:2px;background:var(--ink);margin:6px 8px}
+.mobile-menu{display:none;background:var(--cream);border-bottom:1px solid rgba(43,26,20,.12);padding:8px 22px 18px}
+.mobile-menu a{display:block;padding:11px 4px;font-weight:600;text-decoration:none;color:var(--ink);border-bottom:1px dashed rgba(43,26,20,.14);font-size:15px}
+.mobile-menu.open{display:block}
+
+/* hero */
+.hero{position:relative;background:linear-gradient(160deg,var(--burgundy) 0%,var(--burgundy-deep) 78%);color:var(--cream);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 420px at 85% 20%,rgba(201,151,63,.22),transparent 60%),radial-gradient(500px 380px at 5% 95%,rgba(0,0,0,.35),transparent 60%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1fr auto;gap:44px;align-items:center;padding-top:84px;padding-bottom:92px}
+.hero h1{font-size:clamp(38px,5.6vw,64px);font-weight:900;margin:16px 0 18px;color:#fdf6e8}
+.hero h1 em{font-style:italic;color:var(--gold-soft)}
+.hero p.lead{font-size:clamp(16px,2vw,19px);color:#ecd9bb;max-width:560px;margin-bottom:30px}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:34px}
+.chips{display:flex;flex-wrap:wrap;gap:11px}
+.chip{border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.06);border-radius:99px;padding:9px 16px;font-size:13px;font-weight:600;color:#f2e4c8}
+
+/* 50 years roundel */
+.roundel{width:190px;height:190px;position:relative;filter:drop-shadow(0 16px 30px rgba(0,0,0,.4))}
+.roundel svg{width:100%;height:100%}
+@media (prefers-reduced-motion:no-preference){
+  .roundel .ring{animation:spin 26s linear infinite;transform-origin:50% 50%}
+  @keyframes spin{to{transform:rotate(360deg)}}
+}
+
+/* sections */
+section{padding:88px 0}
+.sec-head{max-width:660px;margin-bottom:48px}
+.sec-head h2{font-size:clamp(30px,4vw,44px);font-weight:700;margin:12px 0 12px}
+.sec-head p{color:var(--muted);font-size:16.5px}
+.center{text-align:center;margin-left:auto;margin-right:auto}
+
+/* story */
+.story-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:52px;align-items:start}
+.story-copy p{margin-bottom:16px;font-size:15.5px;color:#4c3a2e}
+.story-copy p:first-of-type::first-letter{
+  font-family:'Fraunces',serif;font-weight:900;font-size:52px;float:left;line-height:.9;
+  padding:4px 10px 0 0;color:var(--burgundy);
+}
+.stats{display:grid;gap:18px}
+.stat{
+  background:#fff;border:1px solid rgba(43,26,20,.09);border-radius:12px;padding:24px 26px;
+  box-shadow:0 10px 26px rgba(43,26,20,.05);display:flex;gap:18px;align-items:center
+}
+.stat .num{font-family:'Fraunces',serif;font-weight:900;font-size:38px;color:var(--burgundy);min-width:104px;line-height:1}
+.stat .lbl{font-size:14px;color:var(--muted)}
+.partners{margin-top:46px;background:var(--cream-2);border:1px solid rgba(201,151,63,.35);border-radius:14px;padding:26px 28px;text-align:center}
+.partners h3{font-size:19px;margin-bottom:14px}
+.partners .tags{display:flex;flex-wrap:wrap;gap:9px;justify-content:center}
+.partners .tag{background:#fff;border:1px solid rgba(43,26,20,.12);border-radius:99px;padding:7px 15px;font-size:13px;font-weight:600;color:#5a4432}
+.partners p.note{margin-top:14px;font-size:13px;color:var(--muted)}
+
+/* menu */
+.menu{background:var(--cream-2);border-top:1px solid rgba(43,26,20,.07);border-bottom:1px solid rgba(43,26,20,.07)}
+.tabs{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:42px}
+.tab{
+  border:1px solid rgba(43,26,20,.18);background:#fff;color:var(--ink);border-radius:99px;
+  padding:11px 22px;font-family:'Inter',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:.18s
+}
+.tab:hover{border-color:var(--burgundy)}
+.tab.on{background:var(--burgundy);color:var(--cream);border-color:var(--burgundy)}
+.panel{display:none}
+.panel.on{display:block}
+.dish-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.dish{background:#fff;border:1px solid rgba(43,26,20,.09);border-radius:12px;padding:22px 24px;box-shadow:0 8px 20px rgba(43,26,20,.04)}
+.dish h4{font-family:'Fraunces',serif;font-size:18.5px;margin-bottom:6px;color:var(--burgundy-deep)}
+.dish p{font-size:14px;color:var(--muted)}
+.panel .panel-note{
+  margin-top:26px;text-align:center;font-size:14px;color:#5a4432;
+  background:rgba(201,151,63,.14);border:1px dashed rgba(201,151,63,.6);border-radius:10px;padding:14px 18px
+}
+.menu-links{margin-top:34px;text-align:center;font-size:14px;color:var(--muted)}
+.menu-links a{color:var(--burgundy);font-weight:700}
+
+/* lounge */
+.lounge{background:linear-gradient(160deg,var(--burgundy-deep),#2c0b10);color:var(--cream)}
+.lounge .sec-head p{color:#dcc39d}
+.lounge-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.l-card{border:1px solid rgba(224,188,116,.28);background:rgba(255,255,255,.045);border-radius:14px;padding:28px 26px}
+.l-card .ic{width:46px;height:46px;border-radius:50%;background:rgba(201,151,63,.18);display:grid;place-items:center;color:var(--gold-soft);margin-bottom:16px}
+.l-card h3{font-size:19px;margin-bottom:8px;color:#f6e7c8}
+.l-card p{font-size:14px;color:#d8bd95}
+
+/* hours & visit */
+.hours-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px;margin-bottom:44px}
+.h-card{background:#fff;border:1px solid rgba(43,26,20,.09);border-radius:14px;padding:30px 28px;box-shadow:0 10px 26px rgba(43,26,20,.05);text-align:center}
+.h-card .ic{width:52px;height:52px;margin:0 auto 14px;border-radius:50%;background:var(--cream-2);display:grid;place-items:center;color:var(--burgundy)}
+.h-card h3{font-size:20px;margin-bottom:6px}
+.h-card .time{font-family:'Fraunces',serif;font-size:26px;font-weight:700;color:var(--burgundy)}
+.h-card p{font-size:13.5px;color:var(--muted);margin-top:6px}
+.visit-bar{
+  background:#fff;border:1px solid rgba(43,26,20,.09);border-radius:14px;padding:30px;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;box-shadow:0 10px 26px rgba(43,26,20,.05)
+}
+.v-item .lbl{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
+.v-item .val{font-size:15px;font-weight:600}
+.v-item a{text-decoration:none}
+.v-item a:hover{color:var(--burgundy)}
+.team-note{margin-top:26px;text-align:center;font-size:14px;color:var(--muted)}
+.team-note b{color:var(--burgundy)}
+
+/* footer */
+footer{background:var(--burgundy-deep);color:#c9a97e;padding:44px 0 40px;font-size:13.5px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
+footer .f-brand{font-family:'Fraunces',serif;font-style:italic;font-weight:700;font-size:22px;color:var(--cream)}
+footer .f-brand small{display:block;font-family:'Inter',sans-serif;font-style:normal;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-top:4px}
+footer .disclaimer{font-size:12px;max-width:430px;color:#a3805a}
+
+/* demo bar */
+.demo-note{
+  position:fixed;left:0;right:0;bottom:0;z-index:80;background:#160507;color:#e0cba6;font-size:12.5px;
+  display:flex;align-items:center;justify-content:center;gap:8px;padding:9px 40px 9px 14px;text-align:center;
+  border-top:1px solid rgba(201,151,63,.45)
+}
+.demo-note a{color:var(--gold-soft);font-weight:600}
+.demo-note button{position:absolute;right:8px;top:50%;transform:translateY(-50%);background:none;border:0;color:#9c7d55;font-size:17px;cursor:pointer;padding:4px 8px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+@media (max-width:900px){
+  .hero .wrap{grid-template-columns:1fr;padding-top:64px;padding-bottom:64px}
+  .roundel{display:none}
+  .story-grid{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  nav.links{display:none}
+  .burger{display:block}
+  .topbar .wrap{justify-content:center}
+  .topbar .right{display:none}
+  section{padding:64px 0}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>Open <b>7 days a week</b> · Restaurant 7am–9pm · Lounge 7am–10pm</span>
+    <span class="right">Take-out &amp; curbside: <a href="tel:+15035385925">(503) 538-5925</a></span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="j">J's</span>
+      <span class="rest">Restaurant &amp; Lounge<small>Newberg · Since 1975</small></span>
+    </a>
+    <nav class="links">
+      <a href="#story">Our Story</a>
+      <a href="#menu">Menu</a>
+      <a href="#lounge">The Lounge</a>
+      <a href="#visit">Hours &amp; Visit</a>
+      <a class="nav-call" href="tel:+15035385925">(503) 538-5925</a>
+    </nav>
+    <button class="burger" aria-label="Open menu" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu">
+    <a href="#story">Our Story</a>
+    <a href="#menu">Menu</a>
+    <a href="#lounge">The Lounge</a>
+    <a href="#visit">Hours &amp; Visit</a>
+    <a href="tel:+15035385925">Call (503) 538-5925</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Family Restaurant &amp; Fireside Lounge</span>
+        <h1>Proudly serving Newberg <em>since 1975.</em></h1>
+        <p class="lead">Breakfast, lunch and dinner made from scratch, seven days a week — in the heart of Oregon's wine country. Dine in, take out, or curbside pick-up.</p>
+        <div class="cta-row">
+          <a class="btn btn-gold" href="#menu">View the menu</a>
+          <a class="btn btn-ghost" href="tel:+15035385925">Call (503) 538-5925</a>
+        </div>
+        <div class="chips">
+          <span class="chip">Open 7 days from 7am</span>
+          <span class="chip">Take-out &amp; curbside</span>
+          <span class="chip">Oregon Lottery in the lounge</span>
+        </div>
+      </div>
+      <div class="roundel" aria-hidden="true">
+        <svg viewBox="0 0 200 200">
+          <defs>
+            <path id="circ" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/>
+          </defs>
+          <circle cx="100" cy="100" r="96" fill="#40121a" stroke="#c9973f" stroke-width="2"/>
+          <circle cx="100" cy="100" r="60" fill="none" stroke="#c9973f" stroke-width="1" opacity=".6"/>
+          <g class="ring" fill="#e0bc74" font-family="Inter,sans-serif" font-size="13.5" font-weight="700" letter-spacing="3.5">
+            <text><textPath href="#circ">SERVING NEWBERG · SINCE 1975 · FAMILY RESTAURANT · LOUNGE · </textPath></text>
+          </g>
+          <text x="100" y="97" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-size="46" font-weight="900" fill="#f6e7c8">50<tspan fill="#c9973f">+</tspan></text>
+          <text x="100" y="122" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" letter-spacing="2.5" fill="#c9973f">YEARS</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- STORY -->
+  <section id="story">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="eyebrow">Our Story</span>
+        <h2>From a 50-seat pie house to Newberg's family table</h2>
+      </div>
+      <div class="story-grid">
+        <div class="story-copy rv">
+          <p>Back in 1975, J's opened its doors as <b>J's Family Diner and Pie House</b> — a 50-seat family restaurant that brought a welcome new casual dining experience to Newberg. The community embraced it from day one.</p>
+          <p>Soon after opening, general manager Craig took over as owner and ran J's with great success until 1999 — adding three building expansions along the way to keep up with demand. That's how J's grew into the <b>250-seat family restaurant and lounge</b> you see today.</p>
+          <p>In 1999, current owner <b>Sean Reed and his father Jim</b> took over and began the current legacy: always looking toward the future while honoring the past. In fact, about a quarter of today's menu is made up of crowd favorites from the original 1975 menu.</p>
+          <p>Over the last decade we've doubled down on what matters: local sourcing, no GMOs, no growth hormones, and fresh-from-scratch cooking — breads, desserts and breakfast treats baked daily, and homemade soups, always. Everything we make, we make with the best ingredient of all: love.</p>
+        </div>
+        <div class="stats">
+          <div class="stat rv"><div class="num">1975</div><div class="lbl">Opened as J's Family Diner &amp; Pie House — 50 seats and big ambitions</div></div>
+          <div class="stat rv"><div class="num">250</div><div class="lbl">Seats today, after three building additions — restaurant and lounge</div></div>
+          <div class="stat rv"><div class="num">25%</div><div class="lbl">Of the current menu are original 1975 crowd favorites, still going strong</div></div>
+        </div>
+      </div>
+      <div class="partners rv">
+        <h3>Local &amp; from scratch — our partners</h3>
+        <div class="tags">
+          <span class="tag">St. Helen's Beef</span>
+          <span class="tag">Carlton Farms</span>
+          <span class="tag">Yamhill Farms</span>
+          <span class="tag">Country Natural Beef</span>
+          <span class="tag">Willamette Egg Farms</span>
+          <span class="tag">Newport Pride Beef</span>
+          <span class="tag">Bob's Red Mill</span>
+          <span class="tag">Dakota Roast Coffee</span>
+        </div>
+        <p class="note">Locally sourced meats and produce · fresh-baked breads and desserts · homemade soups every day</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu" id="menu">
+    <div class="wrap">
+      <div class="sec-head center rv">
+        <span class="eyebrow">Breakfast · Lunch · Dinner</span>
+        <h2>A taste of the menu</h2>
+        <p>A few favorites from the kitchen — see the full menus below for everything else.</p>
+      </div>
+      <div class="tabs rv" role="tablist">
+        <button class="tab on" data-panel="p-breakfast">Breakfast</button>
+        <button class="tab" data-panel="p-lunch">Lunch</button>
+        <button class="tab" data-panel="p-dinner">Dinner</button>
+        <button class="tab" data-panel="p-lounge">Lounge &amp; Appetizers</button>
+      </div>
+
+      <div class="panel on" id="p-breakfast">
+        <div class="dish-grid">
+          <div class="dish"><h4>Our Famous Chicken Fried Steak</h4><p>Topped with homemade country gravy, served with two local farm-fresh eggs.</p></div>
+          <div class="dish"><h4>Ranch Breakfast 3×3</h4><p>Three local farm-fresh eggs, three strips of bacon and three sausage links.</p></div>
+          <div class="dish"><h4>Oregon Bay Shrimp Omelette</h4><p>Bay shrimp and cheddar, topped with fresh avocado and sour cream.</p></div>
+          <div class="dish"><h4>Florentine Pepper Bacon Benedict</h4><p>Grilled English muffin, pepper bacon, sautéed spinach, poached eggs and hollandaise.</p></div>
+          <div class="dish"><h4>Country Skillet</h4><p>Bacon and sausage with scrambled eggs and breakfast reds, piled on a homemade biscuit with country gravy.</p></div>
+          <div class="dish"><h4>Chicken &amp; Waffle</h4><p>A fresh crispy waffle topped with buttermilk-battered chicken tenders, maple butter and syrup.</p></div>
+        </div>
+        <p class="panel-note">Breakfast specials Monday–Friday, 7–11am (dine-in only) — ask your server.</p>
+      </div>
+
+      <div class="panel" id="p-lunch">
+        <div class="dish-grid">
+          <div class="dish"><h4>The Clubhouse</h4><p>Thick-cut sourdough layered with deli ham, turkey breast, peppered bacon, lettuce, tomato and mayo.</p></div>
+          <div class="dish"><h4>Traditional Reuben</h4><p>New York deli-style corned beef prepared in house, grilled on marbled rye with Swiss and sauerkraut.</p></div>
+          <div class="dish"><h4>Monte Cristo</h4><p>Thick grilled French toast stuffed with ham, turkey, cheddar and Swiss — wild raspberry sauce for dipping.</p></div>
+          <div class="dish"><h4>J's Philly Steak Sandwich</h4><p>Roast beef au jus, grilled peppers and onions, Swiss cheese on a homemade brioche pub bun.</p></div>
+          <div class="dish"><h4>Gut Buster Burger</h4><p>Topped with a sunny-side-up egg, pepper bacon and cheddar cheese.</p></div>
+          <div class="dish"><h4>Fish &amp; Chips</h4><p>Hand-dipped in our buttermilk batter and golden fried, with coleslaw and homemade tartar sauce.</p></div>
+        </div>
+        <p class="panel-note">Our all-natural ½ lb burgers are locally sourced from Newport Pride ranchers and served on homemade brioche buns.</p>
+      </div>
+
+      <div class="panel" id="p-dinner">
+        <div class="dish-grid">
+          <div class="dish"><h4>Slow-Roasted Prime Rib</h4><p>8 oz or 12 oz, slow-roasted to perfection — Friday and Saturday only.</p></div>
+          <div class="dish"><h4>Choice New York Strip</h4><p>A 10 oz locally sourced steak, cooked to order.</p></div>
+          <div class="dish"><h4>Grilled Salmon</h4><p>Lightly seasoned, served with lemon wedge and tartar sauce.</p></div>
+          <div class="dish"><h4>Chicken Santa Fe</h4><p>Grilled chicken with BBQ sauce, cheddar, pepper bacon, black bean &amp; corn salsa and crispy tortilla strips.</p></div>
+          <div class="dish"><h4>J's Pasta &amp; Meatballs</h4><p>Locally sourced pork and beef meatballs in our own Pomodoro sauce on fettuccini.</p></div>
+          <div class="dish"><h4>Three Cheese Tortellini</h4><p>Ricotta, parmesan and romano stuffed pasta in a creamy white sauce with chicken.</p></div>
+        </div>
+        <p class="panel-note">Dinners come with soup or house salad, a fresh-baked brioche roll and your choice of side.</p>
+      </div>
+
+      <div class="panel" id="p-lounge">
+        <div class="dish-grid">
+          <div class="dish"><h4>J's Double Dip</h4><p>Homemade spinach-artichoke dip and homemade salsa with tortilla chips.</p></div>
+          <div class="dish"><h4>Nachos</h4><p>Fresh tortilla chips, two cheeses, olives, tomatoes, cilantro, jalapeños, homemade salsa and sour cream.</p></div>
+          <div class="dish"><h4>Shrimp Scampi</h4><p>Sautéed prawns with white wine, red pepper flakes and garlic.</p></div>
+          <div class="dish"><h4>Fresh-Cut Zucchini Spears</h4><p>Hand-dipped in our own batter, served with your favorite dipping sauce.</p></div>
+          <div class="dish"><h4>Mozzarella Sticks</h4><p>Italian-breaded, with marinara sauce.</p></div>
+          <div class="dish"><h4>Daily Happy Hour</h4><p>Family dining &amp; lounge, dine-in only — ask about today's happy hour specials.</p></div>
+        </div>
+        <p class="panel-note">The full menu is served in the lounge until 10pm, every day.</p>
+      </div>
+
+      <p class="menu-links rv">Full menus:
+        <a href="https://jsnewberg.weebly.com/uploads/1/0/8/4/10841141/js_restaurant_-_large_6-page_menu_-_web.pdf" target="_blank" rel="noopener">Breakfast, Lunch &amp; Dinner (PDF)</a> ·
+        <a href="https://jsnewberg.weebly.com/uploads/1/0/8/4/10841141/js_restaurant_-_kids_menu_2024.2025-cropped.pdf" target="_blank" rel="noopener">Kid's Menu (PDF)</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- LOUNGE -->
+  <section class="lounge" id="lounge">
+    <div class="wrap">
+      <div class="sec-head center rv">
+        <span class="eyebrow">The Fireside Lounge</span>
+        <h2>Pull up a seat by the fire</h2>
+        <p>Our lounge serves the full menu from 7am to 10pm — with a few extras you won't find in the dining room.</p>
+      </div>
+      <div class="lounge-grid">
+        <div class="l-card rv">
+          <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 22h8M12 22v-4M5 5c0 5 3 9 7 9s7-4 7-9c0-1-1-2-2-2H7C6 3 5 4 5 5Z"/></svg></div>
+          <h3>Daily happy hour</h3>
+          <p>Every day, dine-in only — in the family dining room and the lounge.</p>
+        </div>
+        <div class="l-card rv">
+          <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5ZM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          <h3>Full menu, late</h3>
+          <p>The whole kitchen, from omelettes to prime rib, served in the lounge until 10pm.</p>
+        </div>
+        <div class="l-card rv">
+          <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+          <h3>Oregon Lottery</h3>
+          <p>Try your luck — Oregon Lottery games are available right here in the lounge.</p>
+        </div>
+        <div class="l-card rv">
+          <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18M5 11V7a7 7 0 0 1 14 0v4M8 11v10M16 11v10M3 21h18"/></svg></div>
+          <h3>Wine country's doorstep</h3>
+          <p>Right on Portland Rd in Newberg — the gateway to the Willamette Valley.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOURS & VISIT -->
+  <section id="visit">
+    <div class="wrap">
+      <div class="sec-head center rv">
+        <span class="eyebrow">Hours &amp; Visit</span>
+        <h2>Seven days a week, rain or shine</h2>
+      </div>
+      <div class="hours-grid">
+        <div class="h-card rv">
+          <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg></div>
+          <h3>Restaurant</h3>
+          <div class="time">7:00am – 9:00pm</div>
+          <p>Breakfast, lunch &amp; dinner · 7 days a week</p>
+        </div>
+        <div class="h-card rv">
+          <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 22h8M12 22v-7M5.5 3h13L12 15 5.5 3Z"/></svg></div>
+          <h3>Fireside Lounge</h3>
+          <div class="time">7:00am – 10:00pm</div>
+          <p>Full menu · happy hour · Oregon Lottery</p>
+        </div>
+        <div class="h-card rv">
+          <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <h3>Take-out &amp; curbside</h3>
+          <div class="time">(503) 538-5925</div>
+          <p>Call ahead — we'll bring it right out to you</p>
+        </div>
+      </div>
+      <div class="visit-bar rv">
+        <div class="v-item">
+          <div class="lbl">Address</div>
+          <div class="val">2017 Portland Rd, Newberg, OR 97132</div>
+        </div>
+        <div class="v-item">
+          <div class="lbl">Phone</div>
+          <div class="val"><a href="tel:+15035385925">(503) 538-5925</a></div>
+        </div>
+        <div class="v-item">
+          <div class="lbl">Email</div>
+          <div class="val"><a href="mailto:jsnewberg@gmail.com">jsnewberg@gmail.com</a></div>
+        </div>
+        <div class="v-item">
+          <div class="lbl">Follow along</div>
+          <div class="val"><a href="https://www.facebook.com/js.newberg" target="_blank" rel="noopener">Facebook · @js.newberg</a></div>
+        </div>
+        <div class="v-item">
+          <div class="lbl">Directions</div>
+          <div class="val"><a href="https://www.google.com/maps/search/?api=1&amp;query=J%27s+Restaurant+%26+Lounge%2C+2017+Portland+Rd%2C+Newberg%2C+OR+97132" target="_blank" rel="noopener">Open in Google Maps →</a></div>
+        </div>
+      </div>
+      <p class="team-note rv">Say hi to the team: <b>Bonnie Weeks</b>, General Manager · <b>Danesa Knox</b>, Assistant General Manager · <b>Autumn Lauber</b>, Assistant Manager</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-brand">J's<small>Restaurant &amp; Lounge · Newberg, Oregon</small></div>
+    <p class="disclaimer">Website design concept prepared for J's Restaurant &amp; Lounge. This preview is not the restaurant's official website. Menu highlights adapted from the current published menu, July 2026 — items and availability may change.</p>
+  </div>
+</footer>
+
+<div class="demo-note" id="demoNote">
+  <span>Concept design by Robin Humberg · <a href="mailto:robinhumberg@gmx.de">robinhumberg@gmx.de</a></span>
+  <button aria-label="Dismiss" onclick="document.getElementById('demoNote').style.display='none';document.body.style.paddingBottom='0'">×</button>
+</div>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));
+  document.querySelectorAll('.panel').forEach(x=>x.classList.remove('on'));
+  t.classList.add('on');
+  document.getElementById(t.dataset.panel).classList.add('on');
+}));
+document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.mobile-menu').classList.remove('open')));
+</script>
+</body>
+</html>
